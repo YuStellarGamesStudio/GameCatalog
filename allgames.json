@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "games": [
+    {
+      "id": "airhive",
+      "path": "/games/airhive.json"
+    },
+    {
+      "id": "bunnydoom",
+      "path": "/games/bunnydoom.json"
+    },
+    {
+      "id": "bushwhack",
+      "path": "/games/bushwhack.json"
+    },
+    {
+      "id": "hiddenshade",
+      "path": "/games/hiddenshade.json"
+    },
+    {
+      "id": "nightreap",
+      "path": "/games/nightreap.json"
+    },
+    {
+      "id": "slimegarden",
+      "path": "/games/slimegarden.json"
+    },
+    {
+      "id": "starwardbastion",
+      "path": "/games/starwardbastion.json"
+    }
+  ]
+}
