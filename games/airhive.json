@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "airhive",
+  "defaultLocale": "zh-TW",
+  "locales": {
+    "zh-TW": {
+      "name": "蜂群戰線",
+      "description": "一架戰機，一整片天空。迎擊蜂群，守住最後防線。"
+    },
+    "en": {
+      "name": "Airhive",
+      "description": "One fighter, an entire sky. Face the swarm and hold the last line of defense."
+    },
+    "ja": {
+      "name": "Airhive",
+      "description": "一機の戦闘機、広がる空。群れを迎え撃ち、最後の防衛線を守ろう。"
+    }
+  },
+  "url": "https://airhive.ysgs.app/",
+  "launchUrls": {
+    "zh-TW": "https://airhive.ysgs.app/?lang=zh",
+    "en": "https://airhive.ysgs.app/?lang=en",
+    "ja": "https://airhive.ysgs.app/?lang=ja"
+  },
+  "cover": "https://airhive.ysgs.app/assets/social/og-image.png",
+  "categories": [
+    "arcade"
+  ],
+  "tags": [
+    "air-combat",
+    "auto-fire"
+  ],
+  "status": "published"
+}

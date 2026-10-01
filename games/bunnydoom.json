@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "bunnydoom",
+  "defaultLocale": "zh-TW",
+  "locales": {
+    "zh-TW": {
+      "name": "兔兔末日",
+      "description": "兔兔佔領了世界，最後一隻博美犬挺身反擊。敲打兔兔、蓄力放招，挑戰兔王！"
+    },
+    "en": {
+      "name": "Bunny Doom: Last Pomeranian",
+      "description": "Bunnies have taken over the world, and the last Pomeranian fights back. Smack bunnies, charge up special moves, and challenge the Bunny Kings!"
+    },
+    "ja": {
+      "name": "Bunny Doom: Last Pomeranian",
+      "description": "ウサギたちが世界を占領し、最後のポメラニアンが反撃に立ち上がる。ウサギを叩き、力をためて必殺技を放ち、ウサギの王に挑もう！"
+    }
+  },
+  "url": "https://bunnydoom.ysgs.app/",
+  "cover": "https://bunnydoom.ysgs.app/assets/icons/og.jpg",
+  "categories": [
+    "casual"
+  ],
+  "tags": [
+    "whack-a-mole",
+    "charged-attacks",
+    "boss-battles"
+  ],
+  "status": "published"
+}

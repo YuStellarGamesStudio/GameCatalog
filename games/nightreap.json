@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "nightreap",
+  "defaultLocale": "zh-TW",
+  "locales": {
+    "zh-TW": {
+      "name": "永夜收割",
+      "description": "走進無盡長夜，尋找戰利品與遺物。讓最後的火光繼續燃燒。"
+    },
+    "en": {
+      "name": "Nightreap",
+      "description": "Step into the endless night in search of loot and relics. Keep the last flame burning."
+    },
+    "ja": {
+      "name": "Nightreap",
+      "description": "果てしない長い夜へ踏み込み、戦利品と遺物を探そう。最後の炎を燃やし続けよう。"
+    }
+  },
+  "url": "https://nightreap.ysgs.app/",
+  "launchUrls": {
+    "zh-TW": "https://nightreap.ysgs.app/?lang=zh",
+    "en": "https://nightreap.ysgs.app/?lang=en"
+  },
+  "cover": "https://nightreap.ysgs.app/assets/social/nightreap-social.png",
+  "categories": [
+    "action_rpg"
+  ],
+  "tags": [
+    "loot",
+    "relics"
+  ],
+  "status": "published"
+}

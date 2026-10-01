@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "starwardbastion",
+  "defaultLocale": "zh-TW",
+  "locales": {
+    "zh-TW": {
+      "name": "星域防線",
+      "description": "部署防禦塔，擋下機械軍團。守護星際殖民地的能源核心。"
+    },
+    "en": {
+      "name": "Starward Bastion",
+      "description": "Deploy defense towers to stop the machine army. Protect the energy core of an interstellar colony."
+    },
+    "ja": {
+      "name": "Starward Bastion",
+      "description": "防衛タワーを配置し、機械軍団を食い止めよう。星間コロニーのエネルギーコアを守ろう。"
+    }
+  },
+  "url": "https://starwardbastion.ysgs.app/",
+  "launchUrls": {
+    "zh-TW": "https://starwardbastion.ysgs.app/?lang=zh",
+    "en": "https://starwardbastion.ysgs.app/?lang=en",
+    "ja": "https://starwardbastion.ysgs.app/?lang=ja"
+  },
+  "cover": "https://starwardbastion.ysgs.app/assets/share-en-630x500.png",
+  "categories": [
+    "strategy",
+    "tower_defense"
+  ],
+  "tags": [
+    "tower-placement",
+    "wave-defense"
+  ],
+  "status": "published"
+}

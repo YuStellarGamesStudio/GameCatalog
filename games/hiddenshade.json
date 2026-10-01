@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "hiddenshade",
+  "defaultLocale": "zh-TW",
+  "locales": {
+    "zh-TW": {
+      "name": "藏影迷城",
+      "description": "避開巡邏者的視線，躲進暗處，找到暖光出口。迷宮型躲貓貓。"
+    },
+    "en": {
+      "name": "HiddenShade",
+      "description": "Avoid the patrols' gaze, hide in the shadows, and find the warmly lit exit in a maze-based game of hide-and-seek."
+    },
+    "ja": {
+      "name": "影隠れの迷城",
+      "description": "巡回者の視線を避け、暗がりに身を隠して、暖かな光の出口を探そう。迷路を舞台にしたかくれんぼゲーム。"
+    }
+  },
+  "url": "https://hiddenshade.ysgs.app/",
+  "launchUrls": {
+    "zh-TW": "https://hiddenshade.ysgs.app/?lang=zh",
+    "en": "https://hiddenshade.ysgs.app/?lang=en",
+    "ja": "https://hiddenshade.ysgs.app/?lang=ja"
+  },
+  "cover": "https://hiddenshade.ysgs.app/assets/og.png",
+  "categories": [
+    "stealth",
+    "puzzle"
+  ],
+  "tags": [
+    "stealth",
+    "maze",
+    "isometric"
+  ],
+  "status": "published"
+}

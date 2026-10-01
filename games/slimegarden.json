@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "slimegarden",
+  "defaultLocale": "zh-TW",
+  "locales": {
+    "zh-TW": {
+      "name": "史萊姆花園",
+      "description": "養一缸軟綿綿的史萊姆。慢慢合成、發現配方，收藏窗邊的小幸福。"
+    },
+    "en": {
+      "name": "Slimegarden",
+      "description": "Raise a tank of soft, squishy slimes. Merge at your own pace, discover recipes, and collect little moments of happiness by the window."
+    },
+    "ja": {
+      "name": "Slimegarden",
+      "description": "水槽いっぱいのふわふわなスライムを育てよう。ゆっくり合成してレシピを見つけ、窓辺の小さな幸せを集めよう。"
+    }
+  },
+  "url": "https://slimegarden.ysgs.app/",
+  "cover": "https://slimegarden.ysgs.app/assets/og-image.png",
+  "categories": [
+    "casual",
+    "idle"
+  ],
+  "tags": [
+    "merging",
+    "recipe-discovery",
+    "collecting"
+  ],
+  "status": "published"
+}

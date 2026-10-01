@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "bushwhack",
+  "defaultLocale": "zh-TW",
+  "locales": {
+    "zh-TW": {
+      "name": "草叢突擊",
+      "description": "潛入草叢、搜刮補給、升級火力。伏擊，或被伏擊。"
+    },
+    "en": {
+      "name": "Bushwhack",
+      "description": "Hide in the grass, scavenge supplies, and upgrade your firepower. Ambush, or be ambushed."
+    },
+    "ja": {
+      "name": "Bushwhack",
+      "description": "草むらに潜み、物資を集め、火力を強化しよう。待ち伏せするか、されるか。"
+    }
+  },
+  "url": "https://bushwhack.ysgs.app/",
+  "cover": "https://bushwhack.ysgs.app/assets/og-cover.png",
+  "categories": [
+    "action",
+    "survival",
+    "shooter"
+  ],
+  "tags": [
+    "stealth",
+    "looting",
+    "weapon-upgrades"
+  ],
+  "status": "published"
+}
