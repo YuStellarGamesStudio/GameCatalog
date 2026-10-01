@@ -1,10 +1,10 @@
 # GameCatalog
 
-**YSGS 遊戲分類資料網站 / YSGS Game Category Data Website**
+**YSGS 遊戲資料網站 / YSGS Game Data Website**
 
-GameCatalog 提供可直接取用的靜態遊戲分類資料，讓網站、應用程式與工具共用一致的分類識別碼及多語名稱。
+GameCatalog 提供可直接取用的靜態遊戲資料、參照索引與三語分類字典，讓網站、應用程式與工具共用一致的遊戲資訊及分類識別碼。
 
-GameCatalog provides static game category data so websites, applications, and tools can share consistent category identifiers and multilingual labels.
+GameCatalog provides static game records, a reference index, and a multilingual category dictionary so websites, applications, and tools can share consistent game metadata and category identifiers.
 
 [繁體中文](#traditional-chinese) · [English](#english)
 
@@ -12,6 +12,8 @@ GameCatalog provides static game category data so websites, applications, and to
 | --- | --- |
 | 網站 / Website | [data.ysgs.app](https://data.ysgs.app/) |
 | 分類資料 / Category data | [categories.json](https://data.ysgs.app/categories.json) |
+| 遊戲參照索引 / Game reference index | [allgames.json](allgames.json) |
+| 單一遊戲範例 / Individual game example | [games/hiddenshade.json](games/hiddenshade.json) |
 | 原始碼 / Source repository | [YuStellarGamesStudio/GameCatalog](https://github.com/YuStellarGamesStudio/GameCatalog) |
 | 安全政策 / Security policy | [SECURITY.md](SECURITY.md) |
 | 授權 / License | [Apache License 2.0](LICENSE) |
@@ -22,7 +24,7 @@ GameCatalog provides static game category data so websites, applications, and to
 
 ### 1. 網站定位
 
-GameCatalog 是 YuStellarGamesStudio 的遊戲分類資料倉庫與靜態發布網站。它的核心用途是提供一份便於程式讀取、可以版本控制的分類字典，而不是透過後端動態查詢遊戲資料。
+GameCatalog 是 YuStellarGamesStudio 的遊戲資料倉庫與靜態發布網站。它提供可供程式讀取、版本控制的遊戲紀錄與分類字典，而不是透過後端動態查詢遊戲資料。
 
 目前的主要資料為 [`categories.json`](categories.json)，包含 **47 種常見遊戲分類**。每個分類都提供英文、繁體中文與日文名稱，適合用於：
 
@@ -34,11 +36,15 @@ GameCatalog 是 YuStellarGamesStudio 的遊戲分類資料倉庫與靜態發布�
 
 上述選單與篩選器是**資料的使用情境**，並不是本倉庫已實作的互動介面。
 
+另外提供來自 [官方遊戲首頁](https://gh.ysgs.app/) 的 **7 款遊戲紀錄**，存放於 `games/`。根目錄 [`allgames.json`](allgames.json) 只列出遊戲 `id` 與資料檔案 `path`，詳細名稱、描述、封面、分類及啟動網址由單一遊戲檔案提供。
+
 ### 2. 目前提供的功能與範圍
 
 | 功能 | 說明 |
 | --- | --- |
 | 靜態分類資料 | 以單一 JSON 檔案提供完整分類字典，可以下載或透過 HTTP 讀取。 |
+| 單一遊戲資料 | `games/<id>.json` 提供三語名稱與描述、入口、原始封面連結、分類、tags 與發布狀態。 |
+| 輕量參照索引 | `allgames.json` 只列出 `id` 與 `path`，不複製遊戲詳細欄位；使用端可按需載入。 |
 | 三語分類名稱 | 每個分類包含 `en`、`zh-TW`、`ja` 三個語言欄位，由使用端選擇顯示語言。 |
 | 共用分類識別碼 | 使用不依賴顯示語言的 key，例如 `strategy`、`action_rpg`。 |
 | 多種類型覆蓋 | 涵蓋動作、冒險、角色扮演、策略、模擬、射擊、益智、運動等常見類型及部分子類型。 |
@@ -47,7 +53,7 @@ GameCatalog 是 YuStellarGamesStudio 的遊戲分類資料倉庫與靜態發布�
 | 公開版本控制 | 資料與文件維護於 GitHub，變更可以透過 commit 歷史追蹤。 |
 | 安全與授權文件 | 提供安全通報政策與 Apache License 2.0 授權條款。 |
 
-**目前沒有提供：**個別遊戲清單、遊戲詳細頁、搜尋或推薦引擎、帳號系統、收藏功能、線上資料編輯器，以及動態查詢 API。三語欄位代表資料支援多語顯示，不代表網站已有語言切換按鈕。
+**目前沒有提供：**互動式遊戲詳細頁、搜尋或推薦引擎、帳號系統、收藏功能、線上資料編輯器，以及動態查詢 API。遊戲紀錄與三語欄位是靜態資料，不代表網站已有遊戲瀏覽介面或語言切換按鈕。
 
 網站根路徑與 JSON 資料路徑是不同資源。某個頁面尚未部署或顯示 404，不一定表示分類檔案也無法使用；應分別檢查。
 
@@ -192,6 +198,78 @@ print(categories["strategy"]["ja"])
 - 如需可重現的建置，使用固定 commit 中的資料，不要假設 `main` 或網站檔案永遠不變。
 - 從其他網站或 GitHub 讀取時，遵守服務供應者的使用條款；本專案不承諾固定速率限制或可用性 SLA。
 
+#### 5.5. 使用 `allgames.json` 查找遊戲資料
+
+[`allgames.json`](allgames.json) 是參照索引，不是完整紀錄的集合。根物件有 `schemaVersion: 1` 與 `games` 陣列；陣列每項**只有 `id`、`path`**，例如：
+
+```json
+{
+  "id": "hiddenshade",
+  "path": "/games/hiddenshade.json"
+}
+```
+
+這是索引中的一個元素，不是整份索引。`path` 指向資料網站上的 JSON 檔案，不是遊戲啟動網址；實際遊玩入口要再讀取遊戲紀錄的 `url` 或已提供的 `launchUrls`。
+
+取用流程：
+
+1. 讀取 `/allgames.json`，查看 `games` 中的參照。
+2. 以 `id` 找到需要的遊戲；索引按 `id` 升冪排序，排序不代表推薦順序。
+3. 用資料網站的 origin 解析 `path`，並載入對應 JSON。
+4. 從 `locales["zh-TW"]`、`locales.en` 或 `locales.ja` 取得名稱與描述，分類名稱另由 `categories.json` 查找。
+5. 啟動時使用 `launchUrls[所選語言]`；未提供則使用 `url`，不要自行推測語言參數。
+
+目前的七款紀錄：
+
+| ID | 遊戲名稱 | 資料檔案 |
+| --- | --- | --- |
+| `airhive` | 蜂群戰線 / Airhive | [airhive.json](games/airhive.json) |
+| `bunnydoom` | 兔兔末日 / Bunny Doom: Last Pomeranian | [bunnydoom.json](games/bunnydoom.json) |
+| `bushwhack` | 草叢突擊 / Bushwhack | [bushwhack.json](games/bushwhack.json) |
+| `hiddenshade` | 藏影迷城 / HiddenShade | [hiddenshade.json](games/hiddenshade.json) |
+| `nightreap` | 永夜收割 / Nightreap | [nightreap.json](games/nightreap.json) |
+| `slimegarden` | 史萊姆花園 / Slimegarden | [slimegarden.json](games/slimegarden.json) |
+| `starwardbastion` | 星域防線 / Starward Bastion | [starwardbastion.json](games/starwardbastion.json) |
+
+以下範例搭配第 7 節的本地檔案伺服器，只請求索引與所選的藏影迷城紀錄，不一次下載所有遊戲：
+
+```javascript
+async function main() {
+  const baseUrl = "http://127.0.0.1:8000/";
+  const indexResponse = await fetch(new URL("/allgames.json", baseUrl));
+  if (!indexResponse.ok) {
+    throw new Error(`Index HTTP ${indexResponse.status}`);
+  }
+
+  const index = await indexResponse.json();
+  const reference = index.games.find(({ id }) => id === "hiddenshade");
+  if (!reference) {
+    throw new Error("Game not found: hiddenshade");
+  }
+
+  const gameResponse = await fetch(new URL(reference.path, baseUrl));
+  if (!gameResponse.ok) {
+    throw new Error(`Game HTTP ${gameResponse.status}`);
+  }
+
+  const game = await gameResponse.json();
+  if (game.id !== reference.id) {
+    throw new Error("Game ID does not match the index reference");
+  }
+
+  console.log(index.games.length);
+  console.log(game.locales["zh-TW"].name);
+}
+
+main().catch(console.error);
+```
+
+目前輸出為 `7` 與 `藏影迷城`。等這批資料成功部署後，可將 `baseUrl` 改為 `https://data.ysgs.app/`；僅存在於本地的檔案不表示公開端點已更新。
+
+封面 `cover` 直接引用各遊戲原始網站的 HTTPS 圖片連結，不在本倉庫下載或重新託管。資料文案依來源介紹翻譯；資料支援某個語言不代表遊戲本身必然提供該語言介面。需要時應檢查已提供的 `launchUrls` 與遊戲實際功能。
+
+新增、刪除或重新命名遊戲時同步維護索引；只修改文案、封面或分類時，只更新 `games/<id>.json`，不把詳細內容加入 `allgames.json`。
+
 ### 6. 倉庫檔案說明
 
 ```text
@@ -203,12 +281,23 @@ GameCatalog/
 ├── README.md
 ├── SECURITY.md
 ├── _config.yml
-└── categories.json
+├── allgames.json
+├── categories.json
+└── games/
+    ├── airhive.json
+    ├── bunnydoom.json
+    ├── bushwhack.json
+    ├── hiddenshade.json
+    ├── nightreap.json
+    ├── slimegarden.json
+    └── starwardbastion.json
 ```
 
 | 檔案 | 說明 |
 | --- | --- |
 | `categories.json` | 分類識別碼與英文、繁體中文、日文名稱。 |
+| `allgames.json` | 只有 `id` 與 `path` 的遊戲參照索引。 |
+| `games/*.json` | 七款遊戲的完整紀錄，是詳細內容的唯一維護來源。 |
 | `README.md` | 本文件，提供中英雙語的網站與資料使用說明。 |
 | `AGENTS.md` | 分類與遊戲資料撰寫規範，含 `games/*.json` 完整文件範例。 |
 | `CLAUDE.md` | 直接引用 `AGENTS.md` 的 Claude Code 指引入口。 |
@@ -284,7 +373,7 @@ python3 -m http.server 8000 --bind 127.0.0.1
 
 這些是貢獻指引，不代表倉庫已安裝自動驗證或 CI 檢查。
 
-完整的分類與遊戲資料撰寫契約請參閱 [AGENTS.md](AGENTS.md)，其中提供 `games/hiddenshade.json` 的三語欄位、分類引用與啟動網址範例。此範例收錄在文件中，不代表已新增遊戲紀錄或封面資產；`CLAUDE.md` 使用 `@AGENTS.md` 共用同一份規範。
+完整的分類、遊戲資料與參照索引撰寫契約請參閱 [AGENTS.md](AGENTS.md)，其中的 `games/hiddenshade.json` 範例與實際紀錄一致。`CLAUDE.md` 使用 `@AGENTS.md` 共用同一份規範。
 
 ### 9. 安全與授權
 
@@ -298,7 +387,7 @@ python3 -m http.server 8000 --bind 127.0.0.1
 
 ### 1. Website Purpose
 
-GameCatalog is YuStellarGamesStudio's game category data repository and static publication website. Its core purpose is to provide a machine-readable, version-controlled category dictionary rather than query game records through a dynamic backend.
+GameCatalog is YuStellarGamesStudio's game data repository and static publication website. It provides machine-readable, version-controlled game records and a category dictionary rather than querying game records through a dynamic backend.
 
 The primary dataset is [`categories.json`](categories.json), which currently contains **47 common game categories**. Every category includes English, Traditional Chinese, and Japanese labels. The data can be used for:
 
@@ -310,11 +399,15 @@ The primary dataset is [`categories.json`](categories.json), which currently con
 
 Menus and filters are **consumer use cases**, not interactive interfaces implemented in this repository.
 
+It also includes **7 game records** from the [official game listing](https://gh.ysgs.app/) under `games/`. The root [`allgames.json`](allgames.json) contains only each game's `id` and data file `path`; individual records supply names, descriptions, covers, categories, and launch URLs.
+
 ### 2. Available Features and Scope
 
 | Feature | Description |
 | --- | --- |
 | Static category data | A complete dictionary in one JSON file, available for download or HTTP retrieval. |
+| Individual game records | `games/<id>.json` supplies localized names and descriptions, entry points, original cover links, categories, tags, and publication status. |
+| Lightweight reference index | `allgames.json` contains only `id` and `path`, without duplicating detailed fields; consumers can load records on demand. |
 | Three-language labels | Every category includes `en`, `zh-TW`, and `ja`; the consuming application chooses the display language. |
 | Shared category identifiers | Language-independent keys such as `strategy` and `action_rpg`. |
 | Broad genre coverage | Common genres and selected subgenres, including action, adventure, role-playing, strategy, simulation, shooters, puzzles, and sports. |
@@ -323,7 +416,7 @@ Menus and filters are **consumer use cases**, not interactive interfaces impleme
 | Public version history | Data and documentation are maintained on GitHub with changes traceable through commits. |
 | Security and licensing documents | A security reporting policy and Apache License 2.0 terms. |
 
-**Not currently provided:** individual game records, game detail pages, a search or recommendation engine, accounts, favorites, an online data editor, or a dynamic query API. Multilingual fields support localized display; they do not imply that the website has a language-switching control.
+**Not currently provided:** interactive game detail pages, a search or recommendation engine, accounts, favorites, an online data editor, or a dynamic query API. Game records and multilingual labels are static data; they do not imply that a game browsing interface or language-switching control exists.
 
 The website root and the JSON path are separate resources. An unpublished page or a 404 at one path does not necessarily mean the category file is unavailable; check each resource independently.
 
@@ -468,6 +561,78 @@ The current output is `47`, `Strategy`, `策略`, and `ストラテジー`, in t
 - For reproducible builds, use data from a fixed commit instead of assuming that `main` or the website file is immutable.
 - Follow hosting providers' terms when retrieving data. This project does not promise fixed rate limits or an availability SLA.
 
+#### 5.5. Finding game records through `allgames.json`
+
+[`allgames.json`](allgames.json) is a reference index, not a collection of complete records. Its root contains `schemaVersion: 1` and a `games` array. Each array element has **only `id` and `path`**, for example:
+
+```json
+{
+  "id": "hiddenshade",
+  "path": "/games/hiddenshade.json"
+}
+```
+
+This is one index entry, not the entire index. `path` locates a JSON file on the data website, not a game launch page. Load the referenced record to obtain the actual `url` or supported `launchUrls`.
+
+Retrieval workflow:
+
+1. Load `/allgames.json` and inspect its `games` references.
+2. Find the desired `id`. Entries are sorted by `id`, not by recommendation.
+3. Resolve `path` against the data website's origin and retrieve that JSON file.
+4. Read names and descriptions from `locales["zh-TW"]`, `locales.en`, or `locales.ja`. Resolve category labels separately through `categories.json`.
+5. Launch using `launchUrls[selectedLanguage]` when provided; otherwise use `url` without inventing language parameters.
+
+Current records:
+
+| ID | Game name | Data file |
+| --- | --- | --- |
+| `airhive` | 蜂群戰線 / Airhive | [airhive.json](games/airhive.json) |
+| `bunnydoom` | 兔兔末日 / Bunny Doom: Last Pomeranian | [bunnydoom.json](games/bunnydoom.json) |
+| `bushwhack` | 草叢突擊 / Bushwhack | [bushwhack.json](games/bushwhack.json) |
+| `hiddenshade` | 藏影迷城 / HiddenShade | [hiddenshade.json](games/hiddenshade.json) |
+| `nightreap` | 永夜收割 / Nightreap | [nightreap.json](games/nightreap.json) |
+| `slimegarden` | 史萊姆花園 / Slimegarden | [slimegarden.json](games/slimegarden.json) |
+| `starwardbastion` | 星域防線 / Starward Bastion | [starwardbastion.json](games/starwardbastion.json) |
+
+Run this example with the local file server in Section 7. It requests the index and the selected HiddenShade record, not every game:
+
+```javascript
+async function main() {
+  const baseUrl = "http://127.0.0.1:8000/";
+  const indexResponse = await fetch(new URL("/allgames.json", baseUrl));
+  if (!indexResponse.ok) {
+    throw new Error(`Index HTTP ${indexResponse.status}`);
+  }
+
+  const index = await indexResponse.json();
+  const reference = index.games.find(({ id }) => id === "hiddenshade");
+  if (!reference) {
+    throw new Error("Game not found: hiddenshade");
+  }
+
+  const gameResponse = await fetch(new URL(reference.path, baseUrl));
+  if (!gameResponse.ok) {
+    throw new Error(`Game HTTP ${gameResponse.status}`);
+  }
+
+  const game = await gameResponse.json();
+  if (game.id !== reference.id) {
+    throw new Error("Game ID does not match the index reference");
+  }
+
+  console.log(index.games.length);
+  console.log(game.locales["zh-TW"].name);
+}
+
+main().catch(console.error);
+```
+
+The current output is `7` and `藏影迷城`. After this data has been successfully deployed, change `baseUrl` to `https://data.ysgs.app/` if desired. Local files alone do not establish that the public endpoints have been updated.
+
+Each `cover` directly references an HTTPS image on the original game website. Images are not downloaded or rehosted in this repository. Descriptions are translated from source material; localized catalog metadata does not guarantee that the game itself offers the same interface language. Check the supplied `launchUrls` and the actual game's capabilities.
+
+Update the index when adding, deleting, or renaming a game. Changes to descriptions, covers, or categories belong only in `games/<id>.json`; do not copy those fields into `allgames.json`.
+
 ### 6. Repository Files
 
 ```text
@@ -479,12 +644,23 @@ GameCatalog/
 ├── README.md
 ├── SECURITY.md
 ├── _config.yml
-└── categories.json
+├── allgames.json
+├── categories.json
+└── games/
+    ├── airhive.json
+    ├── bunnydoom.json
+    ├── bushwhack.json
+    ├── hiddenshade.json
+    ├── nightreap.json
+    ├── slimegarden.json
+    └── starwardbastion.json
 ```
 
 | File | Description |
 | --- | --- |
 | `categories.json` | Category identifiers with English, Traditional Chinese, and Japanese labels. |
+| `allgames.json` | Game reference index containing only `id` and `path` per entry. |
+| `games/*.json` | Complete records for seven games, the sole maintenance source for detailed content. |
 | `README.md` | This bilingual website and data usage guide. |
 | `AGENTS.md` | Category and game data authoring rules, including a complete documented `games/*.json` example. |
 | `CLAUDE.md` | Claude Code instruction entry point directly importing `AGENTS.md`. |
@@ -560,7 +736,7 @@ When changing categories:
 
 These are contribution guidelines, not a claim that automated validation or CI checks are configured.
 
-See [AGENTS.md](AGENTS.md) for the complete category and game data authoring contract, including the multilingual fields, category references, and launch URL example for `games/hiddenshade.json`. This is a documentation example, not an added game record or cover asset. `CLAUDE.md` imports the same rules through `@AGENTS.md`.
+See [AGENTS.md](AGENTS.md) for the complete category, game record, and reference index authoring contract. Its `games/hiddenshade.json` example matches the actual record. `CLAUDE.md` imports the same rules through `@AGENTS.md`.
 
 ### 9. Security and License
 
