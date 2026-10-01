@@ -17,6 +17,11 @@
     }
   },
   "url": "https://slimegarden.ysgs.app/",
+  "launchUrls": {
+    "zh-TW": "https://slimegarden.ysgs.app/?lang=zh-Hant",
+    "en": "https://slimegarden.ysgs.app/?lang=en",
+    "ja": "https://slimegarden.ysgs.app/?lang=ja"
+  },
   "cover": "https://slimegarden.ysgs.app/assets/og-image.png",
   "categories": [
     "casual",

@@ -17,6 +17,11 @@
     }
   },
   "url": "https://bunnydoom.ysgs.app/",
+  "launchUrls": {
+    "zh-TW": "https://bunnydoom.ysgs.app/?lang=zh",
+    "en": "https://bunnydoom.ysgs.app/?lang=en",
+    "ja": "https://bunnydoom.ysgs.app/?lang=ja"
+  },
   "cover": "https://bunnydoom.ysgs.app/assets/icons/og.jpg",
   "categories": [
     "casual"
