@@ -282,6 +282,7 @@ GameCatalog/
 ├── SECURITY.md
 ├── _config.yml
 ├── allgames.json
+├── favicon.ico
 ├── categories.json
 └── games/
     ├── airhive.json
@@ -303,6 +304,7 @@ GameCatalog/
 | `CLAUDE.md` | 直接引用 `AGENTS.md` 的 Claude Code 指引入口。 |
 | `_config.yml` | Jekyll 主題與外掛設定。 |
 | `CNAME` | GitHub Pages 自訂網域設定。 |
+| `favicon.ico` | 網站圖示，包含 16、32、48 px 的遊戲手把圖案。 |
 | `SECURITY.md` | 安全問題範圍、私密通報方法與協調揭露政策。 |
 | `LICENSE` | Apache License 2.0 完整授權條款。 |
 
@@ -645,6 +647,7 @@ GameCatalog/
 ├── SECURITY.md
 ├── _config.yml
 ├── allgames.json
+├── favicon.ico
 ├── categories.json
 └── games/
     ├── airhive.json
@@ -666,6 +669,7 @@ GameCatalog/
 | `CLAUDE.md` | Claude Code instruction entry point directly importing `AGENTS.md`. |
 | `_config.yml` | Jekyll theme and plugin configuration. |
 | `CNAME` | Custom domain configuration for GitHub Pages. |
+| `favicon.ico` | Website icon with a game controller design in 16, 32, and 48 px sizes. |
 | `SECURITY.md` | Security scope, private reporting guidance, and coordinated disclosure policy. |
 | `LICENSE` | Full Apache License 2.0 terms. |
 
