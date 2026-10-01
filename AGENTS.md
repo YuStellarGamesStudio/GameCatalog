@@ -139,7 +139,7 @@ tags 目前沒有另設中央字典。新增前應比對其他遊戲用詞，避
 
 - 外部遊戲入口、語言專用入口與外部封面使用 HTTPS；不放入 `javascript:`、`data:`、`file:`、私有管理入口或含帳密的 URL。
 - 檢查網址中的 query parameter，不儲存 token、session、臨時簽章或其他秘密。
-- 封面從原始遊戲頁面的 Open Graph／Twitter 圖片 metadata 或已查證的官方資產路徑取得連結，不使用工作室首頁的轉存圖片。
+- 封面以原始遊戲首頁標準的 `<meta property="og:image" content="...">` 連結為準，不使用其他尺寸的分享卡、任意官方資產或工作室首頁轉存圖。缺少 `og:image` 時先回報，不自行猜測替代圖片。
 - 「抓取封面」在本專案指取得 URL，不是下載檔案；除非使用者另外明確要求，不能建立 `covers/` 或複製、轉檔、重新託管圖片。
 - 不依檔名猜測格式或更改副檔名；例如 Bunny Doom 原始封面為 `og.jpg`，不能改成不存在的 `og.png`。使用圖片連結仍須尊重來源權利與條款。
 - `published` 是紀錄標記，不是 GitHub Pages 的隱私控制。提交到公開倉庫的內容即可能被讀取，不能依賴某個欄位隱藏資料。
@@ -241,4 +241,4 @@ python3 -m json.tool allgames.json
 | `hiddenshade` | `https://hiddenshade.ysgs.app/assets/og.png` |
 | `nightreap` | `https://nightreap.ysgs.app/assets/social/nightreap-social.png` |
 | `slimegarden` | `https://slimegarden.ysgs.app/assets/og-image.png` |
-| `starwardbastion` | `https://starwardbastion.ysgs.app/assets/share-en-630x500.png` |
+| `starwardbastion` | `https://starwardbastion.ysgs.app/icons/og-image.png` |
