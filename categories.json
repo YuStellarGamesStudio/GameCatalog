@@ -1,0 +1,237 @@
+{
+  "action": {
+    "en": "Action",
+    "zh-TW": "動作",
+    "ja": "アクション"
+  },
+  "adventure": {
+    "en": "Adventure",
+    "zh-TW": "冒險",
+    "ja": "アドベンチャー"
+  },
+  "action_adventure": {
+    "en": "Action Adventure",
+    "zh-TW": "動作冒險",
+    "ja": "アクションアドベンチャー"
+  },
+  "rpg": {
+    "en": "Role-Playing",
+    "zh-TW": "角色扮演",
+    "ja": "ロールプレイング"
+  },
+  "action_rpg": {
+    "en": "Action RPG",
+    "zh-TW": "動作角色扮演",
+    "ja": "アクションRPG"
+  },
+  "tactical_rpg": {
+    "en": "Tactical RPG",
+    "zh-TW": "戰術角色扮演",
+    "ja": "シミュレーションRPG"
+  },
+  "mmorpg": {
+    "en": "Massively Multiplayer Online RPG",
+    "zh-TW": "大型多人線上角色扮演",
+    "ja": "MMORPG"
+  },
+  "strategy": {
+    "en": "Strategy",
+    "zh-TW": "策略",
+    "ja": "ストラテジー"
+  },
+  "real_time_strategy": {
+    "en": "Real-Time Strategy",
+    "zh-TW": "即時策略",
+    "ja": "リアルタイムストラテジー"
+  },
+  "turn_based_strategy": {
+    "en": "Turn-Based Strategy",
+    "zh-TW": "回合制策略",
+    "ja": "ターン制ストラテジー"
+  },
+  "tower_defense": {
+    "en": "Tower Defense",
+    "zh-TW": "塔防",
+    "ja": "タワーディフェンス"
+  },
+  "simulation": {
+    "en": "Simulation",
+    "zh-TW": "模擬",
+    "ja": "シミュレーション"
+  },
+  "life_simulation": {
+    "en": "Life Simulation",
+    "zh-TW": "生活模擬",
+    "ja": "ライフシミュレーション"
+  },
+  "management": {
+    "en": "Management",
+    "zh-TW": "模擬經營",
+    "ja": "経営シミュレーション"
+  },
+  "city_building": {
+    "en": "City Building",
+    "zh-TW": "城市建造",
+    "ja": "都市建設"
+  },
+  "farming": {
+    "en": "Farming",
+    "zh-TW": "農場模擬",
+    "ja": "農業シミュレーション"
+  },
+  "sandbox": {
+    "en": "Sandbox",
+    "zh-TW": "沙盒",
+    "ja": "サンドボックス"
+  },
+  "survival": {
+    "en": "Survival",
+    "zh-TW": "生存",
+    "ja": "サバイバル"
+  },
+  "horror": {
+    "en": "Horror",
+    "zh-TW": "恐怖",
+    "ja": "ホラー"
+  },
+  "survival_horror": {
+    "en": "Survival Horror",
+    "zh-TW": "生存恐怖",
+    "ja": "サバイバルホラー"
+  },
+  "shooter": {
+    "en": "Shooter",
+    "zh-TW": "射擊",
+    "ja": "シューティング"
+  },
+  "first_person_shooter": {
+    "en": "First-Person Shooter",
+    "zh-TW": "第一人稱射擊",
+    "ja": "ファーストパーソンシューティング"
+  },
+  "third_person_shooter": {
+    "en": "Third-Person Shooter",
+    "zh-TW": "第三人稱射擊",
+    "ja": "サードパーソンシューティング"
+  },
+  "shoot_em_up": {
+    "en": "Shoot 'em Up",
+    "zh-TW": "清版射擊",
+    "ja": "スクロールシューティング"
+  },
+  "battle_royale": {
+    "en": "Battle Royale",
+    "zh-TW": "大逃殺",
+    "ja": "バトルロイヤル"
+  },
+  "moba": {
+    "en": "Multiplayer Online Battle Arena",
+    "zh-TW": "多人線上戰鬥競技場",
+    "ja": "マルチプレイヤーオンラインバトルアリーナ"
+  },
+  "fighting": {
+    "en": "Fighting",
+    "zh-TW": "格鬥",
+    "ja": "格闘"
+  },
+  "beat_em_up": {
+    "en": "Beat 'em Up",
+    "zh-TW": "清版動作",
+    "ja": "ベルトスクロールアクション"
+  },
+  "platformer": {
+    "en": "Platformer",
+    "zh-TW": "平台動作",
+    "ja": "プラットフォームアクション"
+  },
+  "metroidvania": {
+    "en": "Metroidvania",
+    "zh-TW": "類銀河戰士惡魔城",
+    "ja": "メトロイドヴァニア"
+  },
+  "roguelike": {
+    "en": "Roguelike",
+    "zh-TW": "Roguelike",
+    "ja": "ローグライク"
+  },
+  "roguelite": {
+    "en": "Roguelite",
+    "zh-TW": "Roguelite",
+    "ja": "ローグライト"
+  },
+  "puzzle": {
+    "en": "Puzzle",
+    "zh-TW": "益智解謎",
+    "ja": "パズル"
+  },
+  "casual": {
+    "en": "Casual",
+    "zh-TW": "休閒",
+    "ja": "カジュアル"
+  },
+  "arcade": {
+    "en": "Arcade",
+    "zh-TW": "街機",
+    "ja": "アーケード"
+  },
+  "rhythm": {
+    "en": "Rhythm",
+    "zh-TW": "音樂節奏",
+    "ja": "リズム"
+  },
+  "racing": {
+    "en": "Racing",
+    "zh-TW": "競速",
+    "ja": "レース"
+  },
+  "sports": {
+    "en": "Sports",
+    "zh-TW": "運動",
+    "ja": "スポーツ"
+  },
+  "card": {
+    "en": "Card",
+    "zh-TW": "卡牌",
+    "ja": "カード"
+  },
+  "deckbuilding": {
+    "en": "Deckbuilding",
+    "zh-TW": "牌組構築",
+    "ja": "デッキ構築"
+  },
+  "board": {
+    "en": "Board",
+    "zh-TW": "桌上遊戲",
+    "ja": "ボードゲーム"
+  },
+  "party": {
+    "en": "Party",
+    "zh-TW": "派對",
+    "ja": "パーティー"
+  },
+  "visual_novel": {
+    "en": "Visual Novel",
+    "zh-TW": "視覺小說",
+    "ja": "ビジュアルノベル"
+  },
+  "dating_sim": {
+    "en": "Dating Simulation",
+    "zh-TW": "戀愛模擬",
+    "ja": "恋愛シミュレーション"
+  },
+  "stealth": {
+    "en": "Stealth",
+    "zh-TW": "潛行",
+    "ja": "ステルス"
+  },
+  "idle": {
+    "en": "Idle",
+    "zh-TW": "放置",
+    "ja": "放置"
+  },
+  "educational": {
+    "en": "Educational",
+    "zh-TW": "教育",
+    "ja": "教育"
+  }
+}
