@@ -6,7 +6,7 @@
 
 - 本專案是以 GitHub Pages／Jekyll 發布的靜態遊戲資料系統，不是遊戲執行環境或後端服務。
 - `categories.json` 是共用分類字典；`games/<id>.json` 是單一遊戲完整紀錄；根目錄 `allgames.json` 只記錄全部遊戲的 `id` 與 `path` 參照。
-- 目前已依 [官方遊戲首頁](https://gh.ysgs.app/) 建立七個遊戲紀錄與參照索引。本文件定義版本 1 資料契約；尚未提供 JSON Schema、自動驗證器、搜尋介面或資料載入程式。
+- 目前已依 [官方遊戲首頁](https://gh.ysgs.app/) 與各遊戲官方網站建立八個遊戲紀錄與參照索引。本文件定義版本 1 資料契約；尚未提供 JSON Schema、自動驗證器、搜尋介面或資料載入程式。
 - 未經要求，不新增後端、資料庫、套件依賴、建置工具或動態 API。
 - 僅修改任務涉及的資料與文件，保留使用者既有變更，不順便重排其他紀錄。
 - 不捏造遊戲功能、網址、發行狀態、翻譯、封面來源或授權。缺少必要事實時，先查證；無法查證就明確指出缺少的資訊。
@@ -207,13 +207,14 @@ python3 -m json.tool allgames.json
 - 使用端先讀取 `/allgames.json`，再用 `new URL(reference.path, siteOrigin)` 載入需要的紀錄；`path` 是資料網站的位置，不是遊戲 `url` 的相對位置。
 - README 中英兩段須保留索引用法與資料查找範例，不把索引描述成完整遊戲清單的內容快照。
 
-目前七款來源遊戲如下；後續新增紀錄時同步維護此表及 README：
+目前八款來源遊戲如下；後續新增紀錄時同步維護此表及 README：
 
 | ID／檔案 | 繁體中文名稱 | 官方遊戲入口 |
 | --- | --- | --- |
 | [airhive](games/airhive.json) | 蜂群戰線 | [airhive.ysgs.app](https://airhive.ysgs.app/) |
 | [bunnydoom](games/bunnydoom.json) | 兔兔末日 | [bunnydoom.ysgs.app](https://bunnydoom.ysgs.app/) |
 | [bushwhack](games/bushwhack.json) | 草叢突擊 | [bushwhack.ysgs.app](https://bushwhack.ysgs.app/) |
+| [hexsurge](games/hexsurge.json) | 魔潮圍城 | [hexsurge.ysgs.app](https://hexsurge.ysgs.app/) |
 | [hiddenshade](games/hiddenshade.json) | 藏影迷城 | [hiddenshade.ysgs.app](https://hiddenshade.ysgs.app/) |
 | [nightreap](games/nightreap.json) | 永夜收割 | [nightreap.ysgs.app](https://nightreap.ysgs.app/) |
 | [slimegarden](games/slimegarden.json) | 史萊姆花園 | [slimegarden.ysgs.app](https://slimegarden.ysgs.app/) |
@@ -226,8 +227,9 @@ python3 -m json.tool allgames.json
 - 英文與日文描述可忠實翻譯來源介紹，但不得加上來源未支持的功能；這些資料文案不宣稱是遊戲本身的官方譯文。
 - 有已確認的官方在地化名稱時優先採用；沒有時保留既有英文遊戲名，不自行創造正式日文名稱。
 - `launchUrls` 只能使用該遊戲已確認的語言切換方式。沒有證據時省略，使用端回到通用 `url`。
-- 七款封面皆引用各遊戲原始網站的圖片 URL，不下載檔案。外部圖片不受本倉庫授權重新授權，使用仍須遵循來源權利與條款。
+- 八款封面皆引用各遊戲原始網站的圖片 URL，不下載檔案。外部圖片不受本倉庫授權重新授權，使用仍須遵循來源權利與條款。
 - 資料網站預定路徑為 `/allgames.json` 與 `/games/<id>.json`；只有實際部署後才可聲稱這些新端點已公開可用。
+- Hexsurge 的名稱、玩法與封面依 [官方遊戲頁面](https://hexsurge.ysgs.app/)；三語啟動參數依 [已部署的語言模組](https://hexsurge.ysgs.app/src/i18n/i18n.js)。日文名稱保留 Hexsurge，描述為忠實翻譯。
 
 ### 原始封面連結
 
@@ -238,6 +240,7 @@ python3 -m json.tool allgames.json
 | `airhive` | `https://airhive.ysgs.app/assets/social/og-image.png` |
 | `bunnydoom` | `https://bunnydoom.ysgs.app/assets/icons/og.jpg` |
 | `bushwhack` | `https://bushwhack.ysgs.app/assets/og-cover.png` |
+| `hexsurge` | `https://hexsurge.ysgs.app/assets/social/og.png` |
 | `hiddenshade` | `https://hiddenshade.ysgs.app/assets/og.png` |
 | `nightreap` | `https://nightreap.ysgs.app/assets/social/nightreap-social.png` |
 | `slimegarden` | `https://slimegarden.ysgs.app/assets/og-image.png` |

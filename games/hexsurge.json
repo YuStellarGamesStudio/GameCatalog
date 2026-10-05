@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "hexsurge",
+  "defaultLocale": "zh-TW",
+  "locales": {
+    "zh-TW": {
+      "name": "魔潮圍城",
+      "description": "自動施放法術的奇幻生存彈幕遊戲。移動閃避怪群、升級並進化法術，撐過 18 分鐘的魔潮。"
+    },
+    "en": {
+      "name": "Hexsurge",
+      "description": "An auto-casting fantasy survival bullet-hell. Move to dodge the horde, level up and evolve your spells, and survive the 18-minute magic tide."
+    },
+    "ja": {
+      "name": "Hexsurge",
+      "description": "魔法を自動で放つファンタジー弾幕サバイバルゲーム。移動して魔物の群れを避け、レベルアップで魔法を進化させ、18分間の魔潮を生き抜こう。"
+    }
+  },
+  "url": "https://hexsurge.ysgs.app/",
+  "launchUrls": {
+    "zh-TW": "https://hexsurge.ysgs.app/?lang=zh",
+    "en": "https://hexsurge.ysgs.app/?lang=en",
+    "ja": "https://hexsurge.ysgs.app/?lang=ja"
+  },
+  "cover": "https://hexsurge.ysgs.app/assets/social/og.png",
+  "categories": [
+    "action",
+    "survival",
+    "shoot_em_up"
+  ],
+  "tags": [
+    "auto-cast",
+    "bullet-hell",
+    "spell-evolution"
+  ],
+  "status": "published"
+}
