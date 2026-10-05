@@ -17,6 +17,11 @@
     }
   },
   "url": "https://bushwhack.ysgs.app/",
+  "launchUrls": {
+    "zh-TW": "https://bushwhack.ysgs.app/?lang=zh-Hant",
+    "en": "https://bushwhack.ysgs.app/?lang=en",
+    "ja": "https://bushwhack.ysgs.app/?lang=ja"
+  },
   "cover": "https://bushwhack.ysgs.app/assets/og-cover.png",
   "categories": [
     "action",
