@@ -219,7 +219,7 @@ print(categories["strategy"]["ja"])
 4. 從 `locales["zh-TW"]`、`locales.en` 或 `locales.ja` 取得名稱與描述，分類名稱另由 `categories.json` 查找。
 5. 啟動時使用 `launchUrls[所選語言]`；未提供則使用 `url`，不要自行推測語言參數。
 
-目前的八款紀錄：
+目前的九款紀錄：
 
 | ID | 遊戲名稱 | 資料檔案 |
 | --- | --- | --- |
