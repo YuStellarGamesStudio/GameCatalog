@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "jerkyrush",
+  "defaultLocale": "zh-TW",
+  "locales": {
+    "zh-TW": {
+      "name": "小魚干大作戰",
+      "description": "操控黑貓左右移動，接住從天而降的小魚干；灰貓會自動幫忙接，橘貓偶爾從畫面邊緣探出來喵一聲。120 秒內收集魚獲，避開辣椒。"
+    },
+    "en": {
+      "name": "Jerky Rush",
+      "description": "Move the black cat to catch dried fish falling from the sky while the gray cat helps out and the orange cat peeks in with a meow. Collect your catch and dodge the chili peppers in 120 seconds."
+    },
+    "ja": {
+      "name": "Jerky Rush",
+      "description": "黒猫を左右に動かして、空から落ちてくる干物をキャッチしよう。灰猫も手伝ってくれて、橘猫がときどき顔を出してニャーと鳴く。120秒で魚を集め、唐辛子を避けよう。"
+    }
+  },
+  "url": "https://jerkyrush.ysgs.app/",
+  "cover": "https://jerkyrush.ysgs.app/og-image.png",
+  "categories": [
+    "casual",
+    "arcade"
+  ],
+  "tags": [
+    "catching",
+    "cats",
+    "single-player"
+  ],
+  "status": "published"
+}
