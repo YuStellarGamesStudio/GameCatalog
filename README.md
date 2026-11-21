@@ -36,7 +36,7 @@ GameCatalog 是 YuStellarGamesStudio 的遊戲資料倉庫與靜態發布網站�
 
 上述選單與篩選器是**資料的使用情境**，並不是本倉庫已實作的互動介面。
 
-另外提供依 [官方遊戲首頁](https://gh.ysgs.app/) 與各遊戲官方網站查證的 **8 款遊戲紀錄**，存放於 `games/`。根目錄 [`allgames.json`](allgames.json) 只列出遊戲 `id` 與資料檔案 `path`，詳細名稱、描述、封面、分類及啟動網址由單一遊戲檔案提供。
+另外提供依 [官方遊戲首頁](https://gh.ysgs.app/) 與各遊戲官方網站查證的 **9 款遊戲紀錄**，存放於 `games/`。根目錄 [`allgames.json`](allgames.json) 只列出遊戲 `id` 與資料檔案 `path`，詳細名稱、描述、封面、分類及啟動網址由單一遊戲檔案提供。
 
 ### 2. 目前提供的功能與範圍
 
@@ -228,6 +228,7 @@ print(categories["strategy"]["ja"])
 | `bushwhack` | 草叢突擊 / Bushwhack | [bushwhack.json](games/bushwhack.json) |
 | `hexsurge` | 魔潮圍城 / Hexsurge | [hexsurge.json](games/hexsurge.json) |
 | `hiddenshade` | 藏影迷城 / HiddenShade | [hiddenshade.json](games/hiddenshade.json) |
+| `jerkyrush` | 小魚干大作戰 / Jerky Rush | [jerkyrush.json](games/jerkyrush.json) |
 | `nightreap` | 永夜收割 / Nightreap | [nightreap.json](games/nightreap.json) |
 | `slimegarden` | 史萊姆花園 / Slimegarden | [slimegarden.json](games/slimegarden.json) |
 | `starwardbastion` | 星域防線 / Starward Bastion | [starwardbastion.json](games/starwardbastion.json) |
@@ -265,7 +266,7 @@ async function main() {
 main().catch(console.error);
 ```
 
-目前輸出為 `8` 與 `藏影迷城`。等這批資料成功部署後，可將 `baseUrl` 改為 `https://data.ysgs.app/`；僅存在於本地的檔案不表示公開端點已更新。
+目前輸出為 `9` 與 `藏影迷城`。等這批資料成功部署後，可將 `baseUrl` 改為 `https://data.ysgs.app/`；僅存在於本地的檔案不表示公開端點已更新。
 
 封面 `cover` 直接引用各遊戲原始網站的 HTTPS 圖片連結，不在本倉庫下載或重新託管。資料文案依來源介紹翻譯；資料支援某個語言不代表遊戲本身必然提供該語言介面。需要時應檢查已提供的 `launchUrls` 與遊戲實際功能。
 
@@ -291,6 +292,7 @@ GameCatalog/
     ├── bushwhack.json
     ├── hexsurge.json
     ├── hiddenshade.json
+    ├── jerkyrush.json
     ├── nightreap.json
     ├── slimegarden.json
     └── starwardbastion.json
@@ -300,7 +302,7 @@ GameCatalog/
 | --- | --- |
 | `categories.json` | 分類識別碼與英文、繁體中文、日文名稱。 |
 | `allgames.json` | 只有 `id` 與 `path` 的遊戲參照索引。 |
-| `games/*.json` | 八款遊戲的完整紀錄，是詳細內容的唯一維護來源。 |
+| `games/*.json` | 九款遊戲的完整紀錄，是詳細內容的唯一維護來源。 |
 | `README.md` | 本文件，提供中英雙語的網站與資料使用說明。 |
 | `AGENTS.md` | 分類與遊戲資料撰寫規範，含 `games/*.json` 完整文件範例。 |
 | `CLAUDE.md` | 直接引用 `AGENTS.md` 的 Claude Code 指引入口。 |
@@ -403,7 +405,7 @@ The primary dataset is [`categories.json`](categories.json), which currently con
 
 Menus and filters are **consumer use cases**, not interactive interfaces implemented in this repository.
 
-It also includes **8 game records** verified through the [official game listing](https://gh.ysgs.app/) and individual official game websites under `games/`. The root [`allgames.json`](allgames.json) contains only each game's `id` and data file `path`; individual records supply names, descriptions, covers, categories, and launch URLs.
+It also includes **9 game records** verified through the [official game listing](https://gh.ysgs.app/) and individual official game websites under `games/`. The root [`allgames.json`](allgames.json) contains only each game's `id` and data file `path`; individual records supply names, descriptions, covers, categories, and launch URLs.
 
 ### 2. Available Features and Scope
 
@@ -595,6 +597,7 @@ Current records:
 | `bushwhack` | 草叢突擊 / Bushwhack | [bushwhack.json](games/bushwhack.json) |
 | `hexsurge` | 魔潮圍城 / Hexsurge | [hexsurge.json](games/hexsurge.json) |
 | `hiddenshade` | 藏影迷城 / HiddenShade | [hiddenshade.json](games/hiddenshade.json) |
+| `jerkyrush` | 小魚干大作戰 / Jerky Rush | [jerkyrush.json](games/jerkyrush.json) |
 | `nightreap` | 永夜收割 / Nightreap | [nightreap.json](games/nightreap.json) |
 | `slimegarden` | 史萊姆花園 / Slimegarden | [slimegarden.json](games/slimegarden.json) |
 | `starwardbastion` | 星域防線 / Starward Bastion | [starwardbastion.json](games/starwardbastion.json) |
@@ -632,7 +635,7 @@ async function main() {
 main().catch(console.error);
 ```
 
-The current output is `8` and `藏影迷城`. After this data has been successfully deployed, change `baseUrl` to `https://data.ysgs.app/` if desired. Local files alone do not establish that the public endpoints have been updated.
+The current output is `9` and `藏影迷城`. After this data has been successfully deployed, change `baseUrl` to `https://data.ysgs.app/` if desired. Local files alone do not establish that the public endpoints have been updated.
 
 Each `cover` directly references an HTTPS image on the original game website. Images are not downloaded or rehosted in this repository. Descriptions are translated from source material; localized catalog metadata does not guarantee that the game itself offers the same interface language. Check the supplied `launchUrls` and the actual game's capabilities.
 
@@ -658,6 +661,7 @@ GameCatalog/
     ├── bushwhack.json
     ├── hexsurge.json
     ├── hiddenshade.json
+    ├── jerkyrush.json
     ├── nightreap.json
     ├── slimegarden.json
     └── starwardbastion.json
@@ -667,7 +671,7 @@ GameCatalog/
 | --- | --- |
 | `categories.json` | Category identifiers with English, Traditional Chinese, and Japanese labels. |
 | `allgames.json` | Game reference index containing only `id` and `path` per entry. |
-| `games/*.json` | Complete records for eight games, the sole maintenance source for detailed content. |
+| `games/*.json` | Complete records for nine games, the sole maintenance source for detailed content. |
 | `README.md` | This bilingual website and data usage guide. |
 | `AGENTS.md` | Category and game data authoring rules, including a complete documented `games/*.json` example. |
 | `CLAUDE.md` | Claude Code instruction entry point directly importing `AGENTS.md`. |
