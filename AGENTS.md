@@ -207,7 +207,7 @@ python3 -m json.tool allgames.json
 - 使用端先讀取 `/allgames.json`，再用 `new URL(reference.path, siteOrigin)` 載入需要的紀錄；`path` 是資料網站的位置，不是遊戲 `url` 的相對位置。
 - README 中英兩段須保留索引用法與資料查找範例，不把索引描述成完整遊戲清單的內容快照。
 
-目前八款來源遊戲如下；後續新增紀錄時同步維護此表及 README：
+目前九款來源遊戲如下；後續新增紀錄時同步維護此表及 README：
 
 | ID／檔案 | 繁體中文名稱 | 官方遊戲入口 |
 | --- | --- | --- |
@@ -215,7 +215,8 @@ python3 -m json.tool allgames.json
 | [bunnydoom](games/bunnydoom.json) | 兔兔末日 | [bunnydoom.ysgs.app](https://bunnydoom.ysgs.app/) |
 | [bushwhack](games/bushwhack.json) | 草叢突擊 | [bushwhack.ysgs.app](https://bushwhack.ysgs.app/) |
 | [hexsurge](games/hexsurge.json) | 魔潮圍城 | [hexsurge.ysgs.app](https://hexsurge.ysgs.app/) |
-| [hiddenshade](games/hiddenshade.json) | 藏影迷城 | [hiddenshade.ysgs.app](https://hiddenshade.ysgs.app/) |
+| [hiddenshade](games/hiddenshade.json) | 藏影迷城 | [hiddenshade.ysgs.app](https://hiddenshade.ysgs.app/) 
+| [jerkyrush](games/jerkyrush.json) | 小魚干大作戰 | [jerkyrush.ysgs.app](https://jerkyrush.ysgs.app/) |
 | [nightreap](games/nightreap.json) | 永夜收割 | [nightreap.ysgs.app](https://nightreap.ysgs.app/) |
 | [slimegarden](games/slimegarden.json) | 史萊姆花園 | [slimegarden.ysgs.app](https://slimegarden.ysgs.app/) |
 | [starwardbastion](games/starwardbastion.json) | 星域防線 | [starwardbastion.ysgs.app](https://starwardbastion.ysgs.app/) |
@@ -241,7 +242,8 @@ python3 -m json.tool allgames.json
 | `bunnydoom` | `https://bunnydoom.ysgs.app/assets/icons/og.jpg` |
 | `bushwhack` | `https://bushwhack.ysgs.app/assets/og-cover.png` |
 | `hexsurge` | `https://hexsurge.ysgs.app/assets/social/og.png` |
-| `hiddenshade` | `https://hiddenshade.ysgs.app/assets/og.png` |
+| `hiddenshade` | `https://hiddenshade.ysgs.app/assets/og.png` 
+| `jerkyrush` | `https://jerkyrush.ysgs.app/og-image.png` |
 | `nightreap` | `https://nightreap.ysgs.app/assets/social/nightreap-social.png` |
 | `slimegarden` | `https://slimegarden.ysgs.app/assets/og-image.png` |
 | `starwardbastion` | `https://starwardbastion.ysgs.app/icons/og-image.png` |
